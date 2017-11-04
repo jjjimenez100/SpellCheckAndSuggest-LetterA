@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="315.0" prefWidth="348.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.amata.spellchecker.SpellCheckerGUIController">
+    <children>
+        <Label fx:id="label" layoutX="126" layoutY="120" minHeight="16" minWidth="69" />
+      <MenuBar layoutX="1.0" layoutY="2.0" prefHeight="25.0" prefWidth="405.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem id="optionClose" mnemonicParsing="false" onAction="#onActionClose" text="Close" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem id="optionAbout" mnemonicParsing="false" onAction="#onActionAbout" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <ListView fx:id="suggestionsView" layoutX="1.0" layoutY="157.0" prefHeight="203.0" prefWidth="405.0" />
+      <Label layoutX="54.0" layoutY="56.0" text="Enter Word: ">
+         <font>
+            <Font size="13.0" />
+         </font></Label>
+      <TextField fx:id="inputField" layoutX="130.0" layoutY="49.0" prefHeight="33.0" prefWidth="187.0" promptText="Enter word to be checked" />
+      <Button fx:id="checkSpellingBtn" layoutX="126.0" layoutY="99.0" mnemonicParsing="false" onAction="#onActionCheckSpellingBtn" prefHeight="25.0" prefWidth="97.0" text="Check spelling" />
+      <Button fx:id="resetBtn" layoutX="244.0" layoutY="99.0" mnemonicParsing="false" onAction="#onActionResetBtn" prefHeight="25.0" prefWidth="49.0" text="Reset" />
+      <Label fx:id="statusLbl" layoutX="303.0" layoutY="137.0" prefHeight="17.0" prefWidth="97.0" />
+      <Label layoutX="1.0" layoutY="137.0" text="Suggestions:">
+         <font>
+            <Font size="13.0" />
+         </font></Label>
+    </children>
+</AnchorPane>
